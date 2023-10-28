@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="authentication" method="upgrade">
+    <name>plg_authentication_nxd_email</name>
+    <author>NXD | Marco Rensch</author>
+    <creationDate>October 2023</creationDate>
+    <copyright>NXD nx-designs. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>support@nx-designs.ch</authorEmail>
+    <authorUrl>www.nx-designs.ch</authorUrl>
+    <version>1.0</version>
+    <description>PLG_AUTHENTICATION_NXD_EMAIL_AUTH_DESC</description>
+    <scriptfile>script.php</scriptfile>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_authentication_nxdemailauth.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_authentication_nxdemailauth.sys.ini</language>
+    </languages>
+    <files>
+        <filename plugin="nxdemailauth">nxdemailauth.php</filename>
+        <folder>language</folder>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                        name="backend_enabled"
+                        type="radio"
+                        layout="joomla.form.field.radio.switcher"
+                        default="0"
+                        label="PLG_AUTHENTICATION_NXD_EMAIL_AUTH_BACKEND_ENABLED_LABEL"
+                        description="PLG_AUTHENTICATION_NXD_EMAIL_AUTH_BACKEND_ENABLED_DESC"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <updateservers>
+        <server type="extension" name="nx-designs - E-Mail Authentication Plugin">
+            https://update.nx-designs.ch/joomla/plugins/nxdemailauth.xml
+        </server>
+    </updateservers>
+</extension>
