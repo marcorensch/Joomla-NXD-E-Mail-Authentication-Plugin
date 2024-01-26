@@ -13,6 +13,8 @@
     <languages folder="language">
         <language tag="en-GB">en-GB/en-GB.plg_authentication_nxdemailauth.ini</language>
         <language tag="en-GB">en-GB/en-GB.plg_authentication_nxdemailauth.sys.ini</language>
+		<language tag="es-ES">es-ES/es-ES.plg_authentication_nxdemailauth.ini</language>
+        <language tag="es-ES">es-ES/es-ES.plg_authentication_nxdemailauth.sys.ini</language>
     </languages>
     <files>
         <filename plugin="nxdemailauth">nxdemailauth.php</filename>
