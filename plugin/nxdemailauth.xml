@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="authentication" method="upgrade">
+    <name>PLG_AUTHENTICATION_NXDEMAILAUTH</name>
+    <author>NXD nx-designs Marco Rensch</author>
+    <creationDate>2026-09-10</creationDate>
+    <copyright>Copyright (C) 2026 NXD. All rights reserved.</copyright>
+    <license>GNU General Public License version 3 or later; see LICENSE.txt</license>
+    <authorEmail>support@nx-designs.ch</authorEmail>
+    <authorUrl>https://www.nx-designs.ch</authorUrl>
+    <version>2.0.0</version>
+    <description>PLG_AUTHENTICATION_NXDEMAILAUTH_XML_DESCRIPTION</description>
+    <namespace path="src">Nxd\Plugin\Authentication\NxdEmailAuth</namespace>
+    <scriptfile>script.php</scriptfile>
+    <files>
+        <folder plugin="nxdemailauth">services</folder>
+        <folder>src</folder>
+        <folder>language</folder>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_authentication_nxdemailauth.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_authentication_nxdemailauth.sys.ini</language>
+        <language tag="de-DE">de-DE/de-DE.plg_authentication_nxdemailauth.ini</language>
+        <language tag="de-DE">de-DE/de-DE.plg_authentication_nxdemailauth.sys.ini</language>
+        <language tag="es-ES">es-ES/es-ES.plg_authentication_nxdemailauth.ini</language>
+        <language tag="es-ES">es-ES/es-ES.plg_authentication_nxdemailauth.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                        name="backend_enabled"
+                        type="radio"
+                        layout="joomla.form.field.radio.switcher"
+                        label="PLG_AUTHENTICATION_NXDEMAILAUTH_BACKEND_ENABLED_LABEL"
+                        description="PLG_AUTHENTICATION_NXDEMAILAUTH_BACKEND_ENABLED_DESC"
+                        default="0"
+                >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <updateservers>
+        <server type="extension" name="nx-designs - E-Mail Authentication Plugin">https://update.nx-designs.ch/joomla/plugins/nxdemailauth.xml</server>
+    </updateservers>
+</extension>
